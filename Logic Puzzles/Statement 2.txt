@@ -1,0 +1,13 @@
+formulas(assumptions).
+
+-investor(x) | (stock(y) | bond(y)) & buy(x,y).
+-crash | -stock(x) | gold(x) | falls(x).
+-(Tbillrise) | -bond(x) | fall(x).
+-investor(x) & buy(x,y) & falls(y) | -happy(x).
+end_of_list.
+
+formulas(goals).
+-Tbillrise | -crash | -investor(x) | -happy(x) | buy(x,Gold(x)).
+end_of_list.
+
+

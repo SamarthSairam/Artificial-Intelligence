@@ -1,0 +1,18 @@
+formulas(assumptions).
+
+
+-Eats(x,y) | -Pizza(y) | Happy(x).
+-Foodie(x) | (Eats(x,f(x)) & Pizza(f(x))) | (Eats(x,f(x)) & Salad(f(x))).
+-Eats(x,y) | -Salad(y) | Healthy(x).
+-Healthy(x) | Gyms(x).
+-Happy(x) | -Nice(y) | -Dated(y, x).
+Nice(Ann).
+Foodie(Peter).
+
+end_of_list.
+
+formulas(goals).
+
+Gyms(Peter) | -Dated(Ann,Peter).
+
+end_of_list.
